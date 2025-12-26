@@ -1,4 +1,4 @@
-import './App.css'
+
 import Footer from './component/Layout/footer/Footer.jsx'
 import Header from './component/Layout/header/Header.jsx'
 import Policy from './component/Layout/policy/Policy.jsx'
@@ -8,6 +8,8 @@ import Product from './component/Layout/Products/Product.jsx'
 import Campaigns from './component/Layout/Campaigns/Campaigns.jsx'
 import Blogs from './component/Layout/Blogs/Blogs.jsx'
 
+import './App.css'
+import Brands from './component/Layout/Brands/Brands.jsx'
 function App() {
 
   return (
@@ -19,6 +21,7 @@ function App() {
       <Campaigns />
       <Product />
       <Blogs />
+      <Brands />
       <Policy />
       <Footer />
 

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './BlogItem.css'
 function BlogItem() {
     return (
         <li className="blog-item">
