@@ -5,6 +5,7 @@ import Policy from './component/Layout/policy/Policy.jsx'
 import Sliders from './component/Layout/Slider/Sliders.jsx'
 import Categories from './component/Layout/Categories/Categories.jsx'
 import Product from './component/Layout/Products/Product.jsx'
+import Campaigns from './component/Layout/Campaigns/Campaigns.jsx'
 
 function App() {
 
@@ -12,9 +13,9 @@ function App() {
     <>
       <Header />
       <Sliders />
-
       <Categories />
       <Product />
+      <Campaigns />
       <Policy />
       <Footer />
 
