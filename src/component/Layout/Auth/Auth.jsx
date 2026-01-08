@@ -9,7 +9,6 @@ import './Auth.css'
 function Auth() {
     return (
         <>
-            <Header />
             <section className="account-page">
                 <div className="container">
                     <div className="account-wrapper">
@@ -19,8 +18,6 @@ function Auth() {
                     </div>
                 </div>
             </section>
-            <Policy />
-            <Footer />
         </>
     )
 }

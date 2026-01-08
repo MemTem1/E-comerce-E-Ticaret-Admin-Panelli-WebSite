@@ -7,7 +7,6 @@ import Campaigns from '../component/Layout/Campaigns/Campaigns.jsx'
 import Blogs from '../component/Layout/Blogs/Blogs.jsx'
 import Brands from '../component/Layout/Brands/Brands.jsx'
 import CampaignSingle from '../component/Layout/CampaignSingle/CampaignSingle.jsx'
-import Policy from '../component/Layout/policy/Policy.jsx'
 import Footer from '../component/Layout/footer/Footer.jsx'
 function HomePage() {
     return (
@@ -21,7 +20,7 @@ function HomePage() {
             <Blogs />
             <Brands />
             <CampaignSingle />
-            <Policy />
+
             <Footer />
         </>
     )

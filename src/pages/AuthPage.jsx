@@ -1,18 +1,17 @@
 import React from 'react'
+import Auth from '../component/Layout/Auth/Auth.jsx'
 import Header from '../component/Layout/header/Header.jsx'
+import Policy from '../component/Layout/policy/Policy.jsx'
 import Footer from '../component/Layout/footer/Footer.jsx'
-import Contact from '../component/Layout/Contact/Contact.jsx'
-
-function ContactPage() {
+function AuthPage() {
     return (
         <>
             <Header />
-            <Contact />
+            <Auth />
 
             <Footer />
         </>
-
     )
 }
 
-export default ContactPage
+export default AuthPage
