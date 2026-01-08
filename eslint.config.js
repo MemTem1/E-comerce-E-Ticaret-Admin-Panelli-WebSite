@@ -9,6 +9,8 @@ export default defineConfig([
   {
     files: ['**/*.{js,jsx}'],
     extends: [
+      'eslint:recommended',
+      'plugin:react/recommended',
       js.configs.recommended,
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,

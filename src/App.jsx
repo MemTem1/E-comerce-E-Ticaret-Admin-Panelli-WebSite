@@ -12,8 +12,8 @@ function App() {
 
   return (
     <>
-      {/* <HomePage />
-      <ShopPage /> */}
+      {/* <HomePage /> */}
+      {/* <ShopPage /> */}
       {/* <ContactPage /> */}
       {/* <AuthPage /> */}
       {/* <CartPage /> */}
