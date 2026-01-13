@@ -1,10 +1,21 @@
 import React from 'react'
+import Proptypes from 'prop-types'
 import './Dialog.css'
-function Dialog() {
+function Dialog({ isDialogShow, setisDialogShow }) {
+
+    const handleCloseDialog = (e) => {
+
+        const checked = e.target.checked
+        console.log(checked);
+        localStorage.setItem("dialog", JSON.stringify(!checked));
+
+
+    }
+
     return (
-        <div className="modal-dialog">
+        <div className={`modal-dialog ${isDialogShow ? "show" : ""}`}>
             <div className="modal-content">
-                <button className="modal-close" type="button">
+                <button className="modal-close" type="button" onClick={() => { setisDialogShow(false) }}>
                     <i className="bi bi-x"></i>
                 </button>
 
@@ -31,12 +42,15 @@ function Dialog() {
                             </button>
 
                             <label>
-                                <input type="checkbox" />
+                                <input type="checkbox" onChange={handleCloseDialog} />
                                 <span>Don&apos;t show this popup again</span>
                             </label>
                         </form>
                     </div>
                 </div>
+            </div>
+            <div className='modal-overlay' onClick={() => setisDialogShow(false)}>
+
             </div>
         </div>
 
@@ -44,3 +58,8 @@ function Dialog() {
 }
 
 export default Dialog
+
+Dialog.propTypes = {
+    isDialogShow: Proptypes.bool,
+    setisDialogShow: Proptypes.func
+}

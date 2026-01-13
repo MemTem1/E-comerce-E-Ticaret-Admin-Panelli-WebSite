@@ -195,6 +195,7 @@ const Header = ({ setIsSearchShow }) => {
                     </div>
                 </div>
             </div>
+            
         </header>
     )
 }
