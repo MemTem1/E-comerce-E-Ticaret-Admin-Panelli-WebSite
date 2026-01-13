@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import './Galery.css'
 import productData from "../../data.json"
 function Galery() {
-    console.log(productData)
-    const [activeImg, setActiveImg] = useState("img/products/product1/1.png")
+    console.log()
+    const [activeImg, setActiveImg] = useState(productData[0].img.singleImage)
     return (
         <div className="product-gallery">
             <div className="single-image-wrapper">
@@ -16,7 +16,20 @@ function Galery() {
 
             <div className="product-thumb">
                 <div className="glide__track" data-glide-el="track">
-                    <ol className="gallery-thumbs glide__slides"></ol>
+                    <ol className="gallery-thumbs glide__slides">
+                        {
+                            productData[0].img.thumbs.map((itemImg, index) => (
+                                <li className='glide__slide glide__slide--active' key={index} onClick={() => { setActiveImg(itemImg) }}>
+                                    <img
+                                        src={itemImg}
+                                        alt=""
+                                        className={`img-flud  ${itemImg === activeImg ? "active" : ""}`} />
+                                </li>
+
+                            ))
+                        }
+
+                    </ol>
                 </div>
 
                 <div className="glide__arrows" data-glide-el="controls">

@@ -19,10 +19,11 @@
     cursor: zoom-in;
 }
 
-/* .single-product .gallery-thumbs {
-    /  display: flex;
-  column-gap: 10px; 
-} */
+.single-product .gallery-thumbs {
+
+    display: flex;
+    column-gap: 10px;
+}
 
 .single-product .gallery-thumbs li {
     cursor: pointer;
@@ -31,6 +32,7 @@
 
 .single-product .gallery-thumbs li img {
     border: 1px solid transparent;
+    width: 100px;
 }
 
 .single-product .gallery-thumbs li img.active {
