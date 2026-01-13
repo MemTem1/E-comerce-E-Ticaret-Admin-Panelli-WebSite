@@ -12,14 +12,14 @@ function App() {
 
   return (
     <>
-      {/* <HomePage /> */}
+      <HomePage />
       {/* <ShopPage /> */}
       {/* <ContactPage /> */}
       {/* <AuthPage /> */}
       {/* <CartPage /> */}
       {/* <BlogPage /> */}
       {/* <SingleBlogsPage /> */}
-      <ProductDetailsPage />
+      {/* <ProductDetailsPage /> */}
 
     </>
   )

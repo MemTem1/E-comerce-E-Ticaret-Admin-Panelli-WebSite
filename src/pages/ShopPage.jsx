@@ -1,7 +1,7 @@
 import React from 'react'
-import Categories from '../component/Layout/Categories/Categories.jsx'
-import Product from '../component/Layout/Products/Product.jsx'
-import CampaignSingle from '../component/Layout/CampaignSingle/CampaignSingle'
+import Categories from '../component/Categories/Categories.jsx'
+import Product from '../component/Products/Product.jsx'
+import CampaignSingle from '../component/CampaignSingle/CampaignSingle.jsx'
 function ShopPage() {
     return (
         <>

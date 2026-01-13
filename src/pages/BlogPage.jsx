@@ -1,5 +1,5 @@
 import React from 'react'
-import Blogs from '../component/Layout/Blogs/Blogs'
+import Blogs from '../component/Blogs/Blogs'
 
 function BlogPage() {
     return (
