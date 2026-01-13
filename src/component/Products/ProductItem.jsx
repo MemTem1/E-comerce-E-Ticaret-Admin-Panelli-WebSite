@@ -1,10 +1,11 @@
 import React from 'react'
 import './ProductItem.css'
-function ProductItem() {
+function ProductItem({ Product }) {
+
     return (
-        <li
+        <div
             className="product-item glide__slide glide__slide--clone"
-            style={{ width: "242.667px", marginRight: "10px" }}
+
         >
             <div className="product-image">
                 <a href="#" draggable={true}>
@@ -23,11 +24,8 @@ function ProductItem() {
 
             <div className="product-info">
                 <a
-                    href="$"
-                    className="product-title"
-                    draggable={true}
-                >
-                    Analogue Resin Strap
+                    href="$" className="product-title" draggable={true}>
+                    {Product.name}
                 </a>
 
                 <ul className="product-star">
@@ -49,8 +47,8 @@ function ProductItem() {
                 </ul>
 
                 <div className="product-prices">
-                    <strong className="new-price">$108.00</strong>
-                    <span className="old-price">$165.00</span>
+                    <strong className="new-price">${Product.price.newPrice}</strong>
+                    <span className="old-price">${Product.price.oldPrice}</span>
                 </div>
 
                 <span className="product-discount">-17%</span>
@@ -70,7 +68,7 @@ function ProductItem() {
                     </a>
                 </div>
             </div>
-        </li>
+        </div>
 
     )
 }

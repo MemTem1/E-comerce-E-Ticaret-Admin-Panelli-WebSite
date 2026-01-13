@@ -161,3 +161,7 @@
         right: 0px;
     }
 }
+
+.slick-slide>div {
+    margin: 0 10px;
+}

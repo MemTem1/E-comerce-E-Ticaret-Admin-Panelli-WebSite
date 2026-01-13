@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Galery.css'
-
+import productData from "../../data.json"
 function Galery() {
+    console.log(productData)
+    const [activeImg, setActiveImg] = useState("img/products/product1/1.png")
     return (
         <div className="product-gallery">
             <div className="single-image-wrapper">
                 <img
-                    src="img/products/product2/1.png"
+                    src={activeImg}
                     id="single-image"
                     alt=""
                 />

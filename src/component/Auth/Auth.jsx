@@ -1,9 +1,6 @@
 import React from 'react'
 import Login from '../Auth/Login.jsx'
 import Register from '../Auth/Register.jsx'
-import Header from '../header/Header.jsx'
-import Policy from '../policy/Policy.jsx'
-import Footer from '../footer/Footer.jsx'
 import './Auth.css'
 
 function Auth() {
