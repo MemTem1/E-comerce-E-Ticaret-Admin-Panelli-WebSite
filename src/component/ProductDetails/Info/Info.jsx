@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Info.css'
 function Info() {
+    const [radioActive, setRadioActive] = useState(0)
+    const [valueAcitve, setValueAcitve] = useState(0)
     return (
         <div className="product-info">
             <h1 className="product-title">Ridley High Waist</h1>
@@ -34,22 +36,34 @@ function Info() {
                             <span>Color</span>
                         </div>
                         <div className="colors-wrapper">
-                            <div className="color-wrapper">
+                            <div className={`color-wrapper ${radioActive == 0 ? "active" : ""}`}
+                                onClick={() => { setRadioActive(0) }}
+                            >
                                 <label className="blue-color">
-                                    <input type="radio" name="product-color" />
+                                    <input type="radio" name="product-color"
+                                    />
                                 </label>
                             </div>
-                            <div className="color-wrapper">
+                            <div className={`color-wrapper ${radioActive == 1 ? "active" : ""}`}
+                                onClick={() => { setRadioActive(1) }}
+
+                            >
                                 <label className="red-color">
                                     <input type="radio" name="product-color" />
                                 </label>
                             </div>
-                            <div className="color-wrapper active">
+                            <div className={`color-wrapper ${radioActive == 2 ? "active" : ""}`}
+
+                                onClick={() => { setRadioActive(2) }}
+                            >
                                 <label className="green-color">
                                     <input type="radio" name="product-color" />
                                 </label>
                             </div>
-                            <div className="color-wrapper">
+                            <div className={`color-wrapper ${radioActive == 3 ? "active" : ""}`}
+
+                                onClick={() => { setRadioActive(3) }}
+                            >
                                 <label className="purple-color">
                                     <input type="radio" name="product-color" />
                                 </label>
@@ -62,11 +76,22 @@ function Info() {
                             <span>Size</span>
                         </div>
                         <div className="values-list">
-                            <span className="active">XS</span>
-                            <span>S</span>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>XL</span>
+                            <span
+                                className={valueAcitve == 0 ? "active" : ""}
+                                onClick={() => { setValueAcitve(0) }}
+                            >XS</span>
+                            <span
+                                className={valueAcitve == 1 ? "active" : ""}
+                                onClick={() => { setValueAcitve(1) }}>S</span>
+                            <span
+                                className={valueAcitve == 2 ? "active" : ""}
+                                onClick={() => { setValueAcitve(2) }}>M</span>
+                            <span
+                                className={valueAcitve == 3 ? "active" : ""}
+                                onClick={() => { setValueAcitve(3) }}>L</span>
+                            <span
+                                className={valueAcitve == 4 ? "active" : ""}
+                                onClick={() => { setValueAcitve(4) }}>XL</span>
                         </div>
                     </div>
 

@@ -8,6 +8,7 @@ import productData from '../data.json'
 
 
 const NextBtn = ({ onClick }) => {
+
     return (
         <button className="glide__arrow glide__arrow--right" onClick={onClick}>
             <i className="bi bi-chevron-right"></i>
@@ -29,6 +30,7 @@ PrevBtn.prototypes = {
     onClick: PropTypes.func,
 }
 function Product() {
+
 
     const [products, setProducts] = useState(productData)
 

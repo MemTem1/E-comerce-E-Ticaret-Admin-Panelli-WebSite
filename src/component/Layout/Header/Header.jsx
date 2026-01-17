@@ -1,4 +1,5 @@
 import './Header.css';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 const Header = ({ setIsSearchShow }) => {
     return (
@@ -195,7 +196,7 @@ const Header = ({ setIsSearchShow }) => {
                     </div>
                 </div>
             </div>
-            
+
         </header>
     )
 }

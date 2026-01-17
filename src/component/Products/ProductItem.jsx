@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import './ProductItem.css'
+import PropTypes from 'prop-types'
+import { CartContext } from '../../context/CartProvider'
+
 function ProductItem({ Product }) {
+    const { addToCart } = useContext(CartContext);
+
+
 
     return (
         <div
@@ -10,12 +16,12 @@ function ProductItem({ Product }) {
             <div className="product-image">
                 <a href="#" draggable={true}>
                     <img
-                        src="img/products/product1/1.png"
+                        src={Product.img.singleImage}
                         alt=""
                         className="img1"
                     />
                     <img
-                        src="img/products/product1/2.png"
+                        src={Product.img.thumbs[1]}
                         alt=""
                         className="img2"
                     />
@@ -47,14 +53,14 @@ function ProductItem({ Product }) {
                 </ul>
 
                 <div className="product-prices">
-                    <strong className="new-price">${Product.price.newPrice}</strong>
-                    <span className="old-price">${Product.price.oldPrice}</span>
+                    <strong className="new-price">${Product.price.newPrice.toFixed(2)}</strong>
+                    <span className="old-price">${Product.price.oldPrice.toFixed(2)}</span>
                 </div>
 
-                <span className="product-discount">-17%</span>
+                <span className="product-discount">-{Product.discount}%</span>
 
                 <div className="product-links">
-                    <button>
+                    <button className='add-to-cart' onClick={() => addToCart(Product)}>
                         <i className="bi bi-basket-fill"></i>
                     </button>
                     <button>
@@ -74,3 +80,8 @@ function ProductItem({ Product }) {
 }
 
 export default ProductItem
+
+ProductItem.propTypes = {
+    Product: PropTypes.object,
+    setCartItems: PropTypes.func,
+}
