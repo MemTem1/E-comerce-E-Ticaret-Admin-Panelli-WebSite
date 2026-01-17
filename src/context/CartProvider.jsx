@@ -22,6 +22,16 @@ const CartProivder = ({ children }) => {
 
     }
 
+    const removeFromCart = (itemId) => {
+
+        const filteredCartItems =  ()=>{
+
+        }
+
+
+
+    }
+
 
     return (
         <CartContext.Provider
