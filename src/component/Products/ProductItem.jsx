@@ -4,8 +4,12 @@ import PropTypes from 'prop-types'
 import { CartContext } from '../../context/CartProvider'
 
 function ProductItem({ Product }) {
-    const { addToCart } = useContext(CartContext);
+    const { cartItems, addToCart } = useContext(CartContext);
 
+    const filteredCart = cartItems.find(
+        (cartItem) => cartItem.id === Product.id
+    )
+    console.log(filteredCart)
 
 
     return (
@@ -60,7 +64,10 @@ function ProductItem({ Product }) {
                 <span className="product-discount">-{Product.discount}%</span>
 
                 <div className="product-links">
-                    <button className='add-to-cart' onClick={() => addToCart(Product)}>
+                    <button className='add-to-cart'
+                        onClick={() => addToCart(Product)}
+                        disabled={filteredCart}
+                    >
                         <i className="bi bi-basket-fill"></i>
                     </button>
                     <button>
